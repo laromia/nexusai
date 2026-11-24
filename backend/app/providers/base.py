@@ -13,13 +13,11 @@ class BaseAIProvider(ABC):
         """
         Generate an AI response.
 
-        Every provider must implement this method.
+        Every provider must return the same normalized structure.
         """
-        pass
+        raise NotImplementedError
 
     @abstractmethod
     def get_provider_name(self) -> str:
-        """
-        Return the provider's name.
-        """
-        pass
+        """Return the provider's name."""
+        raise NotImplementedError
